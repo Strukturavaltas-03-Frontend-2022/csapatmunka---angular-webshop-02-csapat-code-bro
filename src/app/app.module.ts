@@ -8,6 +8,11 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
+import { CatIdPipe } from './pipe/cat-id.pipe';
+import { SearchPipe } from './pipe/search.pipe';
+import { SortPipe } from './pipe/sort.pipe';
+import { HalvedPipe } from './pipe/halved.pipe';
+import { DollarPipe } from './pipe/dollar.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,11 @@ import { HomeComponent } from './page/home/home.component';
     Cat01Component,
     Cat02Component,
     HomeComponent,
+    CatIdPipe,
+    SearchPipe,
+    SortPipe,
+    HalvedPipe,
+    DollarPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
