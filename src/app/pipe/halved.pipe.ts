@@ -6,8 +6,8 @@ import { Product } from '../model/product';
 })
 export class HalvedPipe implements PipeTransform {
 
-  transform(value: Product): Product {
-    value.price=value.price/2;
+  transform(value: number): number {
+    value=value/2;
     return value;
 
     };

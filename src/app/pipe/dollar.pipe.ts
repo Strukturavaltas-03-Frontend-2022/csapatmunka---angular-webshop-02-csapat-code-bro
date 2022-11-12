@@ -6,9 +6,8 @@ import { Product } from '../model/product';
 })
 export class DollarPipe implements PipeTransform {
 
-  transform(value: Product): Product {
-    value.price='$ '+value.price;
-    return value;
+  transform(value: number): string {
+    return '$ '+value;
   }
 
 }
