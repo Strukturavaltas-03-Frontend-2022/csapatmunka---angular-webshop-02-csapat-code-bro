@@ -15,6 +15,7 @@ import { SearchPipe } from './pipe/search.pipe';
 import { SortPipe } from './pipe/sort.pipe';
 import { HalvedPipe } from './pipe/halved.pipe';
 import { DollarPipe } from './pipe/dollar.pipe';
+import { FilterFivePipe } from './pipe/filter-five.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DollarPipe } from './pipe/dollar.pipe';
     SortPipe,
     HalvedPipe,
     DollarPipe,
+    FilterFivePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

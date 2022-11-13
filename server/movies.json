@@ -63,7 +63,7 @@
       "image": "../assets/images/TheDarkKnight.PNG",
       "price": 11,
       "stock": 25,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -74,7 +74,7 @@
       "image": "../assets/images/12AngryMen.PNG",
       "price": 12,
       "stock": 21,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -85,7 +85,7 @@
       "image": "../assets/images/SchindlersList.PNG",
       "price": 17,
       "stock": 36,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
