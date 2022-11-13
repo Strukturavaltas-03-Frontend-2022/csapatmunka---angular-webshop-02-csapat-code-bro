@@ -1,29 +1,28 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'catId'
+  name: 'catId',
 })
 export class CatIdPipe implements PipeTransform {
-
   transform(value: number): string {
+    switch (value) {
+      case 1:
+        return 'Action';
 
-      switch (value) {
-        case 1: return "western";
+      case 2:
+        return 'Drama';
 
-        case 2:  return "drama";
+      case 3:
+        return 'Comedy';
 
-        case 3: return "krimi";
+      case 4:
+        return 'Romantic';
 
-        case 4: return "akció";
+      case 5:
+        return 'Thriller';
 
-        case 5: return "thriller";
-
-
-        default:
-          return "ismeretlen";
-
-          }
-
-    };
-
+      default:
+        return 'Unknown';
+    }
+  }
 }
