@@ -1,1 +1,14 @@
-<p>cat02 works!</p>
+<div class="row d-flex">
+  <app-product-card
+    *ngFor="let movies of dramaMovies$ | async | filterFive"
+    [product]="movies"
+  ></app-product-card>
+</div>
+
+<div class="row d-flex">
+  <app-product-card
+    *ngFor="let movies of dramaMovies$ | async"
+    [product]="movies"
+  ></app-product-card>
+</div>
+
