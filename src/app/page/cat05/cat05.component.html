@@ -1,11 +1,15 @@
-<div class="row d-flex">
-  <app-product-card
-    *ngFor="let movies of thrillerMovies$ | async | filterFive"
-    [product]="movies"
-  ></app-product-card>
+<span class="featuredTitle pl-3">Featured Thrillers:</span>
+<div class="row d-flex justify-content-center my-3">
+  <div class="featuredContainer d-flex">
+    <app-product-card
+      *ngFor="let movies of thrillerMovies$ | async | filterFive"
+      [product]="movies"
+    ></app-product-card>
+  </div>
 </div>
 
-<div class="row d-flex">
+<span class="featuredTitle pl-3">All Thrillers:</span>
+<div class="row d-flex justify-content-center">
   <app-product-card
     *ngFor="let movies of thrillerMovies$ | async"
     [product]="movies"

@@ -11,7 +11,7 @@ import { ProductListComponent } from './common/product-list/product-list.compone
 import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
 import { Cat03Component } from './page/cat03/cat03.component';
-import { Cat04Component } from './page/cat04/cat04.component';
+
 import { Cat05Component } from './page/cat05/cat05.component';
 
 import { CatIdPipe } from './pipe/cat-id.pipe';
@@ -37,7 +37,6 @@ import { FilterFivePipe } from './pipe/filter-five.pipe';
     DollarPipe,
     FilterFivePipe,
     Cat03Component,
-    Cat04Component,
     Cat05Component,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
