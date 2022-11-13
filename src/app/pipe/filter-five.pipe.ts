@@ -13,14 +13,17 @@ export class FilterFivePipe<T extends { [x: string]: any }>
       return value;
     }
 
+    let featuredMoviesall: Product[] = [];
     let featuredMovies: Product[] = [];
-
     value.forEach((movie) => {
       if (movie.featured === true) {
-        featuredMovies.push(movie);
+        featuredMoviesall.push(movie);
       }
     });
-
-    return featuredMovies.slice(0, 5);
+    for (let index = 0; index < 5; index++) {
+      let randomize = Math.floor(Math.random()*featuredMoviesall.length);
+      featuredMovies.push(featuredMoviesall[randomize])
+    }
+    return featuredMovies;
   }
 }
