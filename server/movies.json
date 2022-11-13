@@ -30,7 +30,7 @@
       "image": "../assets/images/TheGodfatherPartTwo.PNG",
       "price": 13,
       "stock": 22,
-      "featured": true,
+      "featured": false,
       "active": false
     },
     {
@@ -107,7 +107,7 @@
       "image": "../assets/images/FightClub.PNG",
       "price": 10,
       "stock": 34,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -151,7 +151,7 @@
       "image": "../assets/images/Inception.PNG",
       "price": 10,
       "stock": 13,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -195,7 +195,7 @@
       "image": "../assets/images/ForrestGump.PNG",
       "price": 15,
       "stock": 5,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -206,7 +206,7 @@
       "image": "../assets/images/Matrix.PNG",
       "price": 14,
       "stock": 2,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -228,7 +228,7 @@
       "image": "../assets/images/CityOfGod.PNG",
       "price": 11,
       "stock": 23,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -239,7 +239,7 @@
       "image": "../assets/images/Seven.PNG",
       "price": 13,
       "stock": 33,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -250,7 +250,7 @@
       "image": "../assets/images/TheSilenceOfTheLambs.PNG",
       "price": 11,
       "stock": 23,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -294,7 +294,7 @@
       "image": "../assets/images/RaidersOfTheLostArk.PNG",
       "price": 17,
       "stock": 24,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -327,7 +327,7 @@
       "image": "../assets/images/Psycho.PNG",
       "price": 11,
       "stock": 38,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -338,7 +338,7 @@
       "image": "../assets/images/Leon.PNG",
       "price": 13,
       "stock": 7,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -360,7 +360,7 @@
       "image": "../assets/images/AmericanHistoryX.PNG",
       "price": 15,
       "stock": 16,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -371,7 +371,7 @@
       "image": "../assets/images/ApocalypseNow.PNG",
       "price": 11,
       "stock": 28,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -382,7 +382,7 @@
       "image": "../assets/images/Terminator2JudgmentDay.PNG",
       "price": 16,
       "stock": 26,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -393,7 +393,7 @@
       "image": "../assets/images/SavingPrivateRyan.PNG",
       "price": 10,
       "stock": 40,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -421,7 +421,7 @@
     {
       "id": 39,
       "catId": 3,
-      "name": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "name": "Dr. Strangelove",
       "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
       "image": "../assets/images/DrStrangelove.PNG",
       "price": 12,
@@ -481,7 +481,7 @@
       "image": "../assets/images/BackToTheFuture.PNG",
       "price": 19,
       "stock": 28,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -492,7 +492,7 @@
       "image": "../assets/images/LifeIsBeautiful.PNG",
       "price": 19,
       "stock": 37,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -514,7 +514,7 @@
       "image": "../assets/images/ThePianist.PNG",
       "price": 17,
       "stock": 9,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -536,7 +536,7 @@
       "image": "../assets/images/TheDeparted.PNG",
       "price": 18,
       "stock": 8,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
@@ -547,7 +547,7 @@
       "image": "../assets/images/M.PNG",
       "price": 12,
       "stock": 35,
-      "featured": false,
+      "featured": true,
       "active": false
     }
   ]
