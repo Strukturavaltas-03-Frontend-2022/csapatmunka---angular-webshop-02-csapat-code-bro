@@ -10,6 +10,11 @@ import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
+import { CatIdPipe } from './pipe/cat-id.pipe';
+import { SearchPipe } from './pipe/search.pipe';
+import { SortPipe } from './pipe/sort.pipe';
+import { HalvedPipe } from './pipe/halved.pipe';
+import { DollarPipe } from './pipe/dollar.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,11 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     HomeComponent,
     ProductCardComponent,
     ProductListComponent,
+    CatIdPipe,
+    SearchPipe,
+    SortPipe,
+    HalvedPipe,
+    DollarPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
