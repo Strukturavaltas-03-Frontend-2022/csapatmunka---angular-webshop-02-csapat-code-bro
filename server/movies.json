@@ -536,7 +536,7 @@
       "image": "../assets/images/TheDeparted.PNG",
       "price": 18,
       "stock": 8,
-      "featured": false,
+      "featured": true,
       "active": false
     },
     {
