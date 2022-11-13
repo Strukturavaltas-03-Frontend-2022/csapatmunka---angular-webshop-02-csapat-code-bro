@@ -10,19 +10,28 @@ export class FilterFivePipe<T extends { [x: string]: any }>
 {
   transform(value: Product[]): any[] {
     if (!Array.isArray(value)) {
+      console.log('üres');
       return value;
     }
 
-    let featuredMoviesall: Product[] = [];
+
+    let featuredMoviesAll: Product[] = [];
     let featuredMovies: Product[] = [];
+    let randomize=0
+
     value.forEach((movie) => {
       if (movie.featured === true) {
-        featuredMoviesall.push(movie);
+        featuredMoviesAll.push(movie);
       }
     });
-    for (let index = 0; index < 5; index++) {
-      let randomize = Math.floor(Math.random()*featuredMoviesall.length);
-      featuredMovies.push(featuredMoviesall[randomize])
+
+    while (featuredMovies.length<5) {
+     randomize = Math.floor(Math.random()*featuredMoviesAll.length);
+
+
+      (featuredMovies.findIndex(movie=> movie.id===featuredMoviesAll[randomize].id)===-1) ?
+      featuredMovies.push(featuredMoviesAll[randomize]) :null;
+
     }
     return featuredMovies;
   }
