@@ -426,7 +426,7 @@
       "image": "../assets/images/DrStrangelove.PNG",
       "price": 12,
       "stock": 26,
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {

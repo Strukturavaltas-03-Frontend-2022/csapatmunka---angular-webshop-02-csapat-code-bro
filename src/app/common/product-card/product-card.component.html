@@ -30,7 +30,22 @@
           </p>
         </div>
         <div class="pt-3">
-          <p class="card-text moviePrice">{{ product.price | dollar}}</p>
+          <p *ngIf="product.active === true" class="card-text moviePrice">
+            <span
+              style="
+                text-decoration: line-through;
+                color: red;
+                font-size: 1.3rem;
+              "
+              >{{ product.price | dollar }}</span
+            >
+            <span style="color: green">
+              {{ product.price | halved | dollar }}
+            </span>
+          </p>
+          <p *ngIf="product.active === false" class="card-text moviePrice">
+            {{ product.price | dollar }}
+          </p>
         </div>
       </div>
     </div>
