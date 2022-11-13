@@ -21,6 +21,8 @@ export class FilterFivePipe<T extends { [x: string]: any }>
       }
     });
 
-    return featuredMovies.slice(0, 5);
+    let shuffledFeaturedMovies = featuredMovies.sort(() => Math.random() - 0.5);
+
+    return shuffledFeaturedMovies.slice(0, 5);
   }
 }
