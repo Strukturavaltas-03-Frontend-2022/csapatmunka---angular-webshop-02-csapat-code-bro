@@ -11,6 +11,8 @@
 .movieCard {
   border: 2px solid var(--bcsandy) !important;
   width: 15rem;
+  cursor: pointer;
+  user-select: none;
 }
 .hr {
   border: 1px solid var(--bcsandy);
@@ -55,8 +57,15 @@
 
   & .moviePrice {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-style: italic;
     color: var(--bcsandlight);
+    height: 45px;
   }
+}
+
+.card:hover {
+  position: relative;
+  top: -5px;
+  box-shadow: 0 0 20px 3px var(--bcblue);
 }
