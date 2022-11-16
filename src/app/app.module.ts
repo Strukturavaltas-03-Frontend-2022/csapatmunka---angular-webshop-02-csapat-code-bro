@@ -20,6 +20,7 @@ import { SortPipe } from './pipe/sort.pipe';
 import { HalvedPipe } from './pipe/halved.pipe';
 import { DollarPipe } from './pipe/dollar.pipe';
 import { FilterFivePipe } from './pipe/filter-five.pipe';
+import { Cat04Component } from './page/cat04/cat04.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FilterFivePipe } from './pipe/filter-five.pipe';
     FilterFivePipe,
     Cat03Component,
     Cat05Component,
+    Cat04Component,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

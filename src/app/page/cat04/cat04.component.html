@@ -1,0 +1,18 @@
+<span class="featuredTitle pl-3">Featured Romantic Movies:</span>
+<div class="row d-flex justify-content-center my-3">
+  <div class="featuredContainer d-flex">
+    <app-product-card
+      *ngFor="let movies of romanticMovies$ | async | filterFive"
+      [product]="movies"
+    ></app-product-card>
+  </div>
+</div>
+
+<span class="featuredTitle pl-3">All Romantic Movies:</span>
+<div class="row d-flex justify-content-center">
+  <app-product-card
+    *ngFor="let movies of romanticMovies$ | async"
+    [product]="movies"
+  ></app-product-card>
+</div>
+
