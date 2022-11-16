@@ -17,6 +17,7 @@ export class ConfigService {
     { text: 'Action', link: '/cat01' },
     { text: 'Drama', link: '/cat02' },
     { text: 'Comedy', link: '/cat03' },
+    { text: 'Romantic', link: '/cat04' },
     { text: 'Thriller', link: '/cat05' },
   ];
 
