@@ -1,3 +1,12 @@
+$colors: (
+  bcgrey: rgb(36, 36, 39),
+  bcsand: rgb(233, 163, 103),
+  bcsandlight: rgb(255, 197, 147),
+  bcred: rgb(233, 0, 7),
+  bcblue: rgb(0, 132, 134),
+  bcwhite: rgba(255, 255, 255, 0.795),
+);
+
 body {
   background-color: black !important;
 }
@@ -5,4 +14,14 @@ body {
 .page-item {
   cursor: pointer;
   user-select: none;
+}
+
+.page-link {
+  background: black !important;
+  border-color: rgb(255, 197, 147) !important;
+  color: rgb(255, 197, 147) !important;
+}
+
+p span {
+  color: rgb(255, 197, 147) !important;
 }
