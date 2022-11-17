@@ -21,6 +21,8 @@ import { HalvedPipe } from './pipe/halved.pipe';
 import { DollarPipe } from './pipe/dollar.pipe';
 import { FilterFivePipe } from './pipe/filter-five.pipe';
 import { Cat04Component } from './page/cat04/cat04.component';
+import { AdminComponent } from './page/admin/admin.component';
+import { DataEditorComponent } from './page/data-editor/data-editor.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { Cat04Component } from './page/cat04/cat04.component';
     Cat03Component,
     Cat05Component,
     Cat04Component,
+    AdminComponent,
+    DataEditorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
