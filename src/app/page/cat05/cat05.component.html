@@ -10,27 +10,32 @@
 
 <span class="featuredTitle pl-3">All Thrillers:</span>
 
-<div class="row d-flex justify-content-center mb-2">
-  <div class="col-1">
-    <select [(ngModel)]="filterKey" class="form-control">
-      <option *ngFor="let options of movieForFilterKeys" [value]="options.key">
-        {{ options.title }}
-      </option>
-    </select>
-  </div>
-  <div class="col-3">
-    <input
-      [(ngModel)]="phrase"
-      type="text"
-      class="form-control"
-      placeholder="Search movie by title, price or quantity..."
-    />
-  </div>
+<div class="d-flex justify-content-center align-items-center my-3">
+  <select
+    [(ngModel)]="filterKey"
+    class="form-select bg-dark text-white"
+    style="height: 2.5rem"
+  >
+    <option value="">Filter</option>
+    <option *ngFor="let options of movieForFilterKeys" [value]="options.key">
+      {{ options.title }}
+    </option>
+  </select>
+
+  <input
+    [hidden]="!filterKey"
+    [(ngModel)]="phrase"
+    type="text"
+    class="form-control w-25 bg-dark text-white"
+    style="height: 2.5rem"
+  />
 </div>
 
 <div class="row d-flex justify-content-center">
   <app-product-card
-    *ngFor="let movies of thrillerMovies$ | async"
+    *ngFor="
+      let movies of thrillerMovies$ | async | universalsearch: filterKey:phrase
+    "
     [product]="movies"
   ></app-product-card>
 </div>

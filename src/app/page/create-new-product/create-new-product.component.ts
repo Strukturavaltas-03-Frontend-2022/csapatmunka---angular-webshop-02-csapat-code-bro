@@ -11,7 +11,9 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./create-new-product.component.scss'],
 })
 export class CreateNewProductComponent implements OnInit {
-  productList$: Observable<Product[]> = this.productService.getAll();
+  product$: Observable<Product> = this.ar.params.pipe(
+    switchMap((params) => this.productService.get(params['id']))
+  );
 
   product: Product = new Product();
 
@@ -24,7 +26,11 @@ export class CreateNewProductComponent implements OnInit {
     private configService: ConfigService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.product$.subscribe((product) => {
+      this.product = product;
+    });
+  }
 
   onSubmit(product: Product): void {
     product.catId = Number(product.catId);
@@ -33,8 +39,14 @@ export class CreateNewProductComponent implements OnInit {
     product.active = Boolean(product.active);
     product.featured = Boolean(product.featured);
 
-    this.productService
-      .create(product)
-      .subscribe((product) => this.router.navigate(['/admin']));
+    if (this.product.id) {
+      this.productService
+        .update(product)
+        .subscribe((product) => this.router.navigate(['/admin']));
+    } else if (!this.product.id) {
+      this.productService
+        .create(product)
+        .subscribe((product) => this.router.navigate(['/admin']));
+    }
   }
 }

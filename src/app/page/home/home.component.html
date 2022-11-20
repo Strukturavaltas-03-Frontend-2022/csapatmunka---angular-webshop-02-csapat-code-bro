@@ -1,49 +1,40 @@
-<div class="container-fluid" style="background-color: rgba(0, 132, 134, 1)">
+<div
+  class="container-fluid d-flex justify-content-center align-items-center py-5"
+  style="background-color: rgba(0, 132, 134, 1)"
+>
   <div class="row">
-    <div class="col-5 d-flex justify-content-center align-items-center">
-      <img
-        src="../../../assets/images/kisspng-photographic-film-cinema-movie-projector-camera-5a86752a84ca25.6592369515187612585439.png"
-        alt=""
-        class="w-75 py-3"
-      />
-    </div>
-    <div
-      class="col-7 w-100 d-flex flex-column justify-content-center align-items-center"
-    >
+    <div class="d-flex flex-column justify-content-center align-items-center">
       <p class="brand">BroCode's Movie Library</p>
-      <p class="retro">GET THE BEST MOVIES ONLINE!</p>
+      <p class="retro">📽GET THE BEST MOVIES ONLINE!📽</p>
       <p class="browse">
         Browse among Featured and Discounted movies in 5 genres!
       </p>
+      <p>🎬 🎞 🎬 🎞 🎬 🎞 🎬 🎞 🎬</p>
+      <p>🎞 🎬 🎞 🎬 🎞</p>
+      <p>🍿</p>
     </div>
   </div>
 </div>
 
 <span class="featuredTitle pl-3 mt-3">Featured Movies:</span>
+<hr class="redhr" />
 <div class="row d-flex justify-content-center my-3">
   <app-product-card
     *ngFor="let movie of movieList$ | async | filterFive"
     [product]="movie"
   ></app-product-card>
 </div>
+<hr class="redhr" />
 
-<span class="discountedTitle pl-3">Discounted Movies:</span>
+<span class="allTitle pl-3">Discounted Movies:</span>
+<hr class="bluehr" />
 <div class="row d-flex justify-content-center my-3">
   <app-product-card
     *ngFor="let movie of discountedMovieList$ | async | filterFive"
     [product]="movie"
   ></app-product-card>
 </div>
+<hr class="bluehr" />
 
 <span class="allTitle pl-3">All Movies:</span>
-<div class="row d-flex justify-content-center">
-  <app-product-list></app-product-list>
-</div>
-
-<!-- <span class="featuredTitle pl-3">All Thrillers:</span>
-<div class="row d-flex justify-content-center">
-  <app-product-card
-    *ngFor="let movies of thrillerMovies$ | async"
-    [product]="movies"
-  ></app-product-card>
-</div> -->
+<app-product-list></app-product-list>

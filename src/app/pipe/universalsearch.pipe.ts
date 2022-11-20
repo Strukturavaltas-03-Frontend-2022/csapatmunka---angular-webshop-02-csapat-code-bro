@@ -15,6 +15,36 @@ export class UniversalsearchPipe implements PipeTransform {
 
     phrase = typeof phrase !== 'number' ? ('' + phrase).toLowerCase() : phrase;
 
+    if (key === 'catId') {
+      if (phrase === 'action') {
+        return value.filter((item) => item['catId'] === 1);
+      }
+    }
+
+    if (key === 'catId') {
+      if (phrase === 'drama') {
+        return value.filter((item) => item['catId'] === 2);
+      }
+    }
+
+    if (key === 'catId') {
+      if (phrase === 'comedy') {
+        return value.filter((item) => item['catId'] === 3);
+      }
+    }
+
+    if (key === 'catId') {
+      if (phrase === 'romantic') {
+        return value.filter((item) => item['catId'] === 4);
+      }
+    }
+
+    if (key === 'catId') {
+      if (phrase === 'thriller') {
+        return value.filter((item) => item['catId'] === 5);
+      }
+    }
+
     return value.filter((item) => {
       if (typeof item[key] === 'number' && typeof phrase === 'number') {
         return item[key] === phrase;

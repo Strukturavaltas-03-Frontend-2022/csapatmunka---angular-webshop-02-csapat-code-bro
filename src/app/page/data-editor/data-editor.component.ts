@@ -29,10 +29,6 @@ export class DataEditorComponent implements OnInit {
 
   catList: any[] = this.configService.catIdList;
 
-  //Gombokhoz tartozó stuffok
-
-  inProgress = false;
-
   constructor(
     private productService: ProductService,
     private configService: ConfigService
@@ -52,13 +48,15 @@ export class DataEditorComponent implements OnInit {
   //Gombok
 
   deleteBtn(product: Product): void {
-    this.productService
-      .remove(product)
-      .subscribe((product) =>
-        this.productService
-          .getAll()
-          .subscribe((productList) => location.reload())
-      );
+    if (confirm('Are you sure?')) {
+      this.productService
+        .remove(product)
+        .subscribe((product) =>
+          this.productService
+            .getAll()
+            .subscribe((productList) => location.reload())
+        );
+    }
   }
 
   editBtn(product: Product): void {}

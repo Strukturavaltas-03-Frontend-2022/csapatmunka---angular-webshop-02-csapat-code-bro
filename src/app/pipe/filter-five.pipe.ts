@@ -1,4 +1,3 @@
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Pipe, PipeTransform } from '@angular/core';
 import { Product } from '../model/product';
 
@@ -23,14 +22,22 @@ export class FilterFivePipe<T extends { [x: string]: any }>
       }
     });
 
-    while (featuredMovies.length < 5) {
-      randomize = Math.floor(Math.random() * featuredMoviesAll.length);
+    if (featuredMoviesAll.length < 5) {
+      return featuredMoviesAll;
+    } else {
+      while (featuredMovies.length < 5) {
+        randomize = Math.floor(Math.random() * featuredMoviesAll.length);
+        while (featuredMovies.length < 5) {
+          randomize = Math.floor(Math.random() * featuredMoviesAll.length);
 
-      featuredMovies.findIndex(
-        (movie) => movie.id === featuredMoviesAll[randomize].id
-      ) === -1
-        ? featuredMovies.push(featuredMoviesAll[randomize])
-        : null;
+          featuredMovies.findIndex(
+            (movie) => movie.id === featuredMoviesAll[randomize].id
+          ) === -1
+            ? featuredMovies.push(featuredMoviesAll[randomize])
+            : null;
+        }
+        return featuredMovies;
+      }
     }
     return featuredMovies;
   }

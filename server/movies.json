@@ -1,6 +1,50 @@
 {
   "movies": [
     {
+      "id": 1,
+      "catId": 2,
+      "name": "The Shawshank Redemption",
+      "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+      "image": "../assets/images/TheShawshankRedemption.PNG",
+      "price": 10,
+      "stock": 15,
+      "featured": true,
+      "active": true
+    },
+    {
+      "id": 2,
+      "catId": 2,
+      "name": "The Godfather",
+      "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+      "image": "../assets/images/TheGodfather.PNG",
+      "price": 12,
+      "stock": 25,
+      "featured": true,
+      "active": false
+    },
+    {
+      "id": 3,
+      "catId": 2,
+      "name": "The Godfather: Part II",
+      "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+      "image": "../assets/images/TheGodfatherPartTwo.PNG",
+      "price": 13,
+      "stock": 22,
+      "featured": false,
+      "active": false
+    },
+    {
+      "id": 4,
+      "catId": 3,
+      "name": "Pulp Fiction",
+      "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+      "image": "../assets/images/PulpFiction.PNG",
+      "price": 16,
+      "stock": 9,
+      "featured": true,
+      "active": true
+    },
+    {
       "id": 5,
       "catId": 1,
       "name": "The Good, the Bad and the Ugly",
@@ -652,7 +696,7 @@
     {
       "id": 64,
       "catId": 4,
-      "name": "West Side Story",
+      "name": "East Side Story",
       "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
       "image": "../assets/images/WestSideStory.PNG",
       "price": 9,
