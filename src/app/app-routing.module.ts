@@ -6,6 +6,7 @@ import { Cat02Component } from './page/cat02/cat02.component';
 import { Cat03Component } from './page/cat03/cat03.component';
 import { Cat04Component } from './page/cat04/cat04.component';
 import { Cat05Component } from './page/cat05/cat05.component';
+import { CreateNewProductComponent } from './page/create-new-product/create-new-product.component';
 import { HomeComponent } from './page/home/home.component';
 
 const routes: Routes = [
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+  },
+  {
+    path: 'newproduct',
+    component: CreateNewProductComponent,
   },
   {
     path: '**',

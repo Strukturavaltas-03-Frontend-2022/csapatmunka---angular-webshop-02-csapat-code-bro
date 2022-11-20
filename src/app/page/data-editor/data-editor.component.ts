@@ -1,4 +1,6 @@
+import { getLocaleCurrencyCode } from '@angular/common';
 import { Component, ElementRef, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { ConfigService } from 'src/app/service/config.service';
@@ -27,9 +29,9 @@ export class DataEditorComponent implements OnInit {
 
   catList: any[] = this.configService.catIdList;
 
-  //Save gomb állapotmódosítás
-  isActive = true;
-  inProgress: boolean = true;
+  //Gombokhoz tartozó stuffok
+
+  inProgress = false;
 
   constructor(
     private productService: ProductService,
@@ -47,17 +49,38 @@ export class DataEditorComponent implements OnInit {
     }
   }
 
-  saveBtn(event: Event, product: Product): void {
-    this.isActive = false;
-    this.inProgress = false;
-    if (
-      typeof product.catId === 'string' ||
-      typeof product.active === 'string' ||
-      typeof product.featured === 'string'
-    ) {
-      product.catId = Number(product.catId);
-      product.active = Boolean(product.active);
-      product.featured = Boolean(product.featured);
-    }
+  //Gombok
+
+  deleteBtn(product: Product): void {
+    this.productService
+      .remove(product)
+      .subscribe((product) =>
+        this.productService
+          .getAll()
+          .subscribe((productList) => location.reload())
+      );
   }
+
+  editBtn(product: Product): void {}
+
+  createBtn(): void {}
 }
+
+// if (
+//   typeof product.catId === 'string' ||
+//   typeof product.active === 'string' ||
+//   typeof product.featured === 'string'
+// ) {
+//   product.catId = Number(product.catId);
+//   product.active = Boolean(product.active);
+//   product.featured = Boolean(product.featured);
+// }
+// }
+
+// this.productService
+//       .update(product)
+//       .subscribe((product) =>
+//         this.productService
+//           .getAll()
+//           .subscribe((products) => console.log('done'))
+//       );

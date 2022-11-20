@@ -26,6 +26,7 @@ import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './page/data-editor/data-editor.component';
 import { UniversalsearchPipe } from './pipe/universalsearch.pipe';
 import { UniversalpipePipe } from './pipe/universalpipe.pipe';
+import { CreateNewProductComponent } from './page/create-new-product/create-new-product.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { UniversalpipePipe } from './pipe/universalpipe.pipe';
     DataEditorComponent,
     UniversalsearchPipe,
     UniversalpipePipe,
+    CreateNewProductComponent,
   ],
   imports: [
     BrowserModule,
