@@ -5,14 +5,20 @@
     </button>
   </div>
   <div class="col-3">
-    <select [(ngModel)]="filterKey" class="form-control">
+    <select class="form-select" [(ngModel)]="filterKey">
+      <option value="">Please select!</option>
       <option *ngFor="let options of movieForFilterKeys" [value]="options.key">
         {{ options.title }}
       </option>
     </select>
   </div>
   <div class="col-4 mb-5">
-    <input [(ngModel)]="phrase" type="text" class="form-control" />
+    <input
+      [hidden]="!filterKey"
+      [(ngModel)]="phrase"
+      type="text"
+      class="form-control"
+    />
   </div>
 </div>
 <div class="row">
@@ -73,6 +79,59 @@
           "
         >
           <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.catId | catId }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.stock }}</td>
+          <td>{{ product.featured }}</td>
+          <td>{{ product.active }}</td>
+          <td>
+            <div class="btn-group">
+              <button
+                [routerLink]="['/newproduct/', product.id]"
+                class="btn btn-info fa fa-pencil"
+              ></button>
+              <button
+                (click)="deleteBtn(product)"
+                class="btn btn-danger fa fa-trash"
+              ></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-6 offset-3">
+    <form action="">
+      <div class="form-group">
+        <label for="">Name</label>
+        <input
+          name="name"
+          [(ngModel)]="product.name"
+          type="text"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Price </label>
+        <input [(ngModel)]="product.price" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="">Stock</label>
+        <input [(ngModel)]="product.stock" type="text" class="form-control" />
+      </div>
+      <button class="btn btn-success">Update</button>
+    </form>
+  </div>
+</div> -->
+
+<!-- Zoárd cucca:
+
+<td>{{ product.id }}</td>
           <td>
             <input
               [(ngModel)]="product.name"
@@ -149,54 +208,4 @@
               <option>true</option>
               <option>false</option>
             </select>
-          </td>
-          <td>
-            <div *ngIf="!inProgress" class="btn-group">
-              <button
-                (click)="editBtn(product)"
-                (click)="inProgress = !inProgress"
-                class="btn btn-info fa fa-pencil"
-              ></button>
-              <button
-                (click)="deleteBtn(product)"
-                class="btn btn-danger fa fa-trash"
-              ></button>
-            </div>
-            <div *ngIf="inProgress" class="btn-group">
-              <button class="btn btn-info fa fa-floppy-o"></button>
-              <button
-                (click)="inProgress = !inProgress"
-                class="btn btn-danger fa fa-times"
-              ></button>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<!-- <div class="row">
-  <div class="col-6 offset-3">
-    <form action="">
-      <div class="form-group">
-        <label for="">Name</label>
-        <input
-          name="name"
-          [(ngModel)]="product.name"
-          type="text"
-          class="form-control"
-        />
-      </div>
-      <div class="form-group">
-        <label for="">Price </label>
-        <input [(ngModel)]="product.price" type="text" class="form-control" />
-      </div>
-      <div class="form-group">
-        <label for="">Stock</label>
-        <input [(ngModel)]="product.stock" type="text" class="form-control" />
-      </div>
-      <button class="btn btn-success">Update</button>
-    </form>
-  </div>
-</div> -->
+          </td> -->
