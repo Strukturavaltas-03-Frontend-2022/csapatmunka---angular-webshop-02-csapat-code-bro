@@ -9,10 +9,9 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./data-editor.component.scss'],
 })
 export class DataEditorComponent implements OnInit {
+  product: Product[] = [];
 
-
-  productList$ : Observable<Product[]> = this.productService.getAll();
-
+  productList$: Observable<Product[]> = this.productService.getAll();
 
   constructor(private productService: ProductService) {}
 

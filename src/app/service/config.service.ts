@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 export interface IMenuItem {
   text: string;
@@ -11,6 +12,8 @@ export interface IMenuItem {
 })
 export class ConfigService {
   appName: string = 'Video Library';
+
+  searchPhrase$: BehaviorSubject<string> = new BehaviorSubject('');
 
   menuItems: IMenuItem[] = [
     { text: 'Home', link: '/', icon: 'home' },
