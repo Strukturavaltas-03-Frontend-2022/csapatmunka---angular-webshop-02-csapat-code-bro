@@ -19,27 +19,31 @@
   </div>
 </div>
 
-<span class="featuredTitle pl-3">Featured Movies:</span>
+<span class="featuredTitle pl-3 mt-3">Featured Movies:</span>
 <div class="row d-flex justify-content-center my-3">
-  <div class="featuredContainer d-flex">
-    <app-product-card
-      *ngFor="let movie of movieList$ | async | filterFive"
-      [product]="movie"
-    ></app-product-card>
-  </div>
+  <app-product-card
+    *ngFor="let movie of movieList$ | async | filterFive"
+    [product]="movie"
+  ></app-product-card>
 </div>
 
 <span class="discountedTitle pl-3">Discounted Movies:</span>
 <div class="row d-flex justify-content-center my-3">
-  <div class="discountedContainer d-flex">
-    <app-product-card
-      *ngFor="let movie of discountedMovieList$ | async | filterFive"
-      [product]="movie"
-    ></app-product-card>
-  </div>
+  <app-product-card
+    *ngFor="let movie of discountedMovieList$ | async | filterFive"
+    [product]="movie"
+  ></app-product-card>
 </div>
 
 <span class="allTitle pl-3">All Movies:</span>
-<div class="col-sm-12-md-6-lg-2">
+<div class="row d-flex justify-content-center">
   <app-product-list></app-product-list>
 </div>
+
+<!-- <span class="featuredTitle pl-3">All Thrillers:</span>
+<div class="row d-flex justify-content-center">
+  <app-product-card
+    *ngFor="let movies of thrillerMovies$ | async"
+    [product]="movies"
+  ></app-product-card>
+</div> -->

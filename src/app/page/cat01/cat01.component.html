@@ -1,27 +1,32 @@
 <span class="featuredTitle pl-3">Featured Action Movies:</span>
-<div class="row d-flex justify-content-center my-3 col-sm-12-md-6-lg-2">
-  <div class="featuredContainer d-flex">
-    <app-product-card
-      *ngFor="let movies of actionMovies$ | async | filterFive"
-      [product]="movies"
-    ></app-product-card>
-  </div>
+<hr class="redhr" />
+<div class="row d-flex justify-content-center my-3">
+  <app-product-card
+    *ngFor="let movies of actionMovies$ | async | filterFive"
+    [product]="movies"
+  ></app-product-card>
 </div>
+<hr class="redhr" />
 
-<div class="row">
-  <div class="col-3 offset-5">
+<span class="featuredTitle pl-3">All Action Movies:</span>
+<div class="row d-flex justify-content-center mb-2">
+  <div class="col-1">
     <select [(ngModel)]="filterKey" class="form-control">
       <option *ngFor="let options of movieForFilterKeys" [value]="options.key">
         {{ options.title }}
       </option>
     </select>
   </div>
-  <div class="col-4 mb-5">
-    <input [(ngModel)]="phrase" type="text" class="form-control" />
+  <div class="col-3">
+    <input
+      [(ngModel)]="phrase"
+      type="text"
+      class="form-control"
+      placeholder="Search movie by title, price or quantity..."
+    />
   </div>
 </div>
 
-<span class="featuredTitle pl-3">All Action Movies:</span>
 <div class="row d-flex justify-content-center">
   <app-product-card
     *ngFor="

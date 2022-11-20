@@ -1,14 +1,33 @@
 <span class="featuredTitle pl-3">Featured Comedies:</span>
+<hr class="redhr" />
 <div class="row d-flex justify-content-center my-3">
-  <div class="featuredContainer d-flex">
-    <app-product-card
-      *ngFor="let movies of comedyMovies$ | async | filterFive"
-      [product]="movies"
-    ></app-product-card>
+  <app-product-card
+    *ngFor="let movies of comedyMovies$ | async | filterFive"
+    [product]="movies"
+  ></app-product-card>
+</div>
+<hr class="redhr" />
+
+<span class="featuredTitle pl-3">All Comedies:</span>
+
+<div class="row d-flex justify-content-center mb-2">
+  <div class="col-1">
+    <select [(ngModel)]="filterKey" class="form-control">
+      <option *ngFor="let options of movieForFilterKeys" [value]="options.key">
+        {{ options.title }}
+      </option>
+    </select>
+  </div>
+  <div class="col-3">
+    <input
+      [(ngModel)]="phrase"
+      type="text"
+      class="form-control"
+      placeholder="Search movie by title, price or quantity..."
+    />
   </div>
 </div>
 
-<span class="featuredTitle pl-3">All Comedies:</span>
 <div class="row d-flex justify-content-center">
   <app-product-card
     *ngFor="let movies of comedyMovies$ | async"

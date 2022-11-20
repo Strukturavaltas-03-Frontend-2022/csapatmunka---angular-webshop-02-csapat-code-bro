@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
+import { ConfigService } from 'src/app/service/config.service';
 import { ProductService } from 'src/app/service/product.service';
 
 @Component({
@@ -14,11 +15,15 @@ export class Cat02Component implements OnInit {
   .getAll()
   .pipe(map((product) => product.filter((movie) => movie.catId === 2)));
 
+  phrase: string = '';
+  filterKey: string = '';
 
+  movieForFilterKeys: any[] = this.configService.searchOptions;
 
-  constructor(private productService: ProductService) { }
+  constructor(
+    private productService: ProductService,
+    private configService: ConfigService
+  ) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
