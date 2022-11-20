@@ -39,7 +39,7 @@
 }
 
 .discountedTitle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--bcred);
 }
 .discountedContainer {
@@ -47,10 +47,14 @@
 }
 
 .allTitle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--bcsandlight);
 }
 
 .browse {
   color: var(--bcsandlight);
+}
+
+.bluehr {
+  border: 2px solid var(--bcblue);
 }

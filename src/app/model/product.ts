@@ -4,7 +4,7 @@ export class Product {
   catId: number = 0;
   name: string = '';
   description: string = '';
-  image: string = '';
+  image: string = '../assets/images/placeholder.png';
   price: number = 0;
   stock: number = 0;
   featured: boolean = false;
