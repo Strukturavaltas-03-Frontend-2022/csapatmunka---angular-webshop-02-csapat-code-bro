@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -20,6 +21,9 @@ import { SortPipe } from './pipe/sort.pipe';
 import { HalvedPipe } from './pipe/halved.pipe';
 import { DollarPipe } from './pipe/dollar.pipe';
 import { FilterFivePipe } from './pipe/filter-five.pipe';
+import { Cat04Component } from './page/cat04/cat04.component';
+import { AdminComponent } from './page/admin/admin.component';
+import { DataEditorComponent } from './page/data-editor/data-editor.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +42,17 @@ import { FilterFivePipe } from './pipe/filter-five.pipe';
     FilterFivePipe,
     Cat03Component,
     Cat05Component,
+    Cat04Component,
+    AdminComponent,
+    DataEditorComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

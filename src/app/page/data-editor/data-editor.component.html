@@ -1,0 +1,113 @@
+<div class="row">
+  <div class="col-8 offset-2">
+    <input class="form-control" #movieSearch type="text" (keyup)="(0)" />
+    <p>{{ movieSearch.value }}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <table class="table table-striped table-hover">
+      <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Featured</th>
+        <th>Active</th>
+        <th>Actions</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of productList$ | async | search: movieSearch">
+          <td>{{ product.id }}</td>
+          <td>
+            <input
+              [(ngModel)]="product.name"
+              type="text"
+              class="form-control"
+              required
+              pattern="[a-zA-Z0-9-\.]{1,}"
+            />
+          </td>
+          <td>{{ product.catId | catId }}</td>
+          <td>
+            <input
+              [(ngModel)]="product.description"
+              type="text"
+              class="form-control"
+            />
+          </td>
+          <td>
+            <input
+              [(ngModel)]="product.price"
+              type="text"
+              class="form-control"
+              required
+              pattern="[0-9]{1,4}"
+            />
+          </td>
+          <td>
+            <input
+              [(ngModel)]="product.stock"
+              type="text"
+              class="form-control"
+              required
+              pattern="[0-9]{1,4}"
+            />
+          </td>
+          <td>
+            <input
+              [(ngModel)]="product.featured"
+              type="text"
+              class="form-control"
+              required
+              pattern="true|false"
+            />
+          </td>
+          <td>
+            <input
+              [(ngModel)]="product.active"
+              type="text"
+              class="form-control"
+              required
+              pattern="true|false"
+            />
+          </td>
+          <td>
+            <div class="btn-group">
+              <button class="btn btn-info fa fa-pencil"></button>
+              <button class="btn btn-warning fa fa-save"></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-6 offset-3">
+    <form action="">
+      <div class="form-group">
+        <label for="">Name</label>
+        <input
+          name="name"
+          [(ngModel)]="product.name"
+          type="text"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Price </label>
+        <input [(ngModel)]="product.price" type="text" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="">Stock</label>
+        <input [(ngModel)]="product.stock" type="text" class="form-control" />
+      </div>
+      <button class="btn btn-success">Update</button>
+    </form>
+  </div>
+</div> -->

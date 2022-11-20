@@ -7,17 +7,10 @@ $colors: (
   bcwhite: rgba(255, 255, 255, 0.795),
 );
 
-body {
-  background-color: black !important;
+th {
+  color: rgb(0, 132, 134) !important;
 }
 
-.page-item {
-  cursor: pointer;
-  user-select: none;
-}
-
-.page-link {
-  background: black !important;
-  border-color: rgb(255, 197, 147) !important;
+td {
   color: rgb(255, 197, 147) !important;
 }

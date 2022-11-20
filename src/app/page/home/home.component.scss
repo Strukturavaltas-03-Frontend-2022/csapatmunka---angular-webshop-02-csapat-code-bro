@@ -29,3 +29,28 @@
   font-style: italic;
   user-select: none;
 }
+
+.featuredTitle {
+  font-size: 2rem;
+  color: var(--bcblue);
+}
+.featuredContainer {
+  border: 2px solid var(--bcred);
+}
+
+.discountedTitle {
+  font-size: 1.5rem;
+  color: var(--bcred);
+}
+.discountedContainer {
+  border: 2px solid var(--bcblue);
+}
+
+.allTitle {
+  font-size: 1.5rem;
+  color: var(--bcsandlight);
+}
+
+.browse {
+  color: var(--bcsandlight);
+}

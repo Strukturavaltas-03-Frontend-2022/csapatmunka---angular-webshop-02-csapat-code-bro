@@ -15,8 +15,8 @@ export class ProductService {
 
   //itt is kicsit előremegyünk, jobb a CRUD-ot egyszerre megírni, de erre még ráfér egy ellenőrzés/tesztelés
 
-  getAll(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apiUrl);
+  getAll(page: string = ''): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiUrl}${page}`);
   }
 
   get(id: number): Observable<Product> {

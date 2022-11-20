@@ -12,6 +12,9 @@
     >
       <p class="brand">BroCode's Movie Library</p>
       <p class="retro">GET THE BEST MOVIES ONLINE!</p>
+      <p class="browse">
+        Browse among Featured and Discounted movies in 5 genres!
+      </p>
     </div>
   </div>
 </div>
@@ -26,12 +29,17 @@
   </div>
 </div>
 
-<span class="featuredTitle pl-3">Discounted Movies:</span>
+<span class="discountedTitle pl-3">Discounted Movies:</span>
 <div class="row d-flex justify-content-center my-3">
-  <div class="featuredContainer d-flex">
+  <div class="discountedContainer d-flex">
     <app-product-card
-      *ngFor="let movie of movieList$ | async | filterFive"
+      *ngFor="let movie of discountedMovieList$ | async | filterFive"
       [product]="movie"
     ></app-product-card>
   </div>
+</div>
+
+<span class="allTitle pl-3">All Movies:</span>
+<div class="d-flex justify-content-center">
+  <app-product-list></app-product-list>
 </div>
