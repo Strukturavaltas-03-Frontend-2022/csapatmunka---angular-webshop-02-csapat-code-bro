@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Product } from 'src/app/model/product';
+import { ConfigService } from 'src/app/service/config.service';
 import { ProductService } from 'src/app/service/product.service';
 
 @Component({
@@ -8,7 +10,10 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit {
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private config: ConfigService
+  ) {}
 
   allPage: number[] = [];
 
@@ -17,6 +22,8 @@ export class ProductListComponent implements OnInit {
   productList: Product[] = [];
 
   ngOnInit(): void {
+
+
     this.refreshPage();
 
     this.productService.getAll().subscribe((datalist) => {
