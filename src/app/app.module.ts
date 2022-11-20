@@ -24,6 +24,8 @@ import { FilterFivePipe } from './pipe/filter-five.pipe';
 import { Cat04Component } from './page/cat04/cat04.component';
 import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './page/data-editor/data-editor.component';
+import { UniversalsearchPipe } from './pipe/universalsearch.pipe';
+import { UniversalpipePipe } from './pipe/universalpipe.pipe';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { DataEditorComponent } from './page/data-editor/data-editor.component';
     Cat04Component,
     AdminComponent,
     DataEditorComponent,
+    UniversalsearchPipe,
+    UniversalpipePipe,
   ],
   imports: [
     BrowserModule,

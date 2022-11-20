@@ -25,5 +25,30 @@ export class ConfigService {
     { text: 'Admin', link: '/admin' },
   ];
 
+  searchOptions: any = [
+    { key: 'name', title: 'Title' },
+    { key: 'price', title: 'Price' },
+    { key: 'stock', title: 'Quantity' },
+  ];
+
+  adminSearchOptions: any = [
+    { key: 'id', title: 'ID' },
+    { key: 'catId', title: 'Category' },
+    { key: 'name', title: 'Title' },
+    { key: 'description', title: 'Description' },
+    { key: 'price', title: 'Price' },
+    { key: 'stock', title: 'Quantity' },
+    { key: 'featured', title: 'Featured' },
+    { key: 'active', title: 'Discounted' },
+  ];
+
+  catIdList: any = [
+    { key: 1, title: 'Action' },
+    { key: 2, title: 'Drama' },
+    { key: 3, title: 'Comedy' },
+    { key: 4, title: 'Romantic' },
+    { key: 5, title: 'Thriller' },
+  ];
+
   constructor() {}
 }
