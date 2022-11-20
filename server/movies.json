@@ -34,6 +34,17 @@
       "active": false
     },
     {
+      "id": 4,
+      "catId": 3,
+      "name": "Pulp Fiction",
+      "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+      "image": "../assets/images/PulpFiction.PNG",
+      "price": 16,
+      "stock": 9,
+      "featured": true,
+      "active": true
+    },
+    {
       "id": 5,
       "catId": 1,
       "name": "The Good, the Bad and the Ugly",
@@ -144,6 +155,17 @@
       "active": true
     },
     {
+      "id": 15,
+      "catId": 3,
+      "name": "Goodfellas",
+      "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+      "image": "../assets/images/GoodFellas.PNG",
+      "price": 17,
+      "stock": 24,
+      "featured": false,
+      "active": false
+    },
+    {
       "id": 16,
       "catId": 1,
       "name": "Star Wars",
@@ -164,6 +186,17 @@
       "stock": 13,
       "featured": false,
       "active": true
+    },
+    {
+      "id": 18,
+      "catId": 3,
+      "name": "Forrest Gump",
+      "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+      "image": "../assets/images/ForrestGump.PNG",
+      "price": 15,
+      "stock": 5,
+      "featured": true,
+      "active": false
     },
     {
       "id": 19,
@@ -241,6 +274,17 @@
       "stock": 13,
       "featured": false,
       "active": false
+    },
+    {
+      "id": 26,
+      "catId": 3,
+      "name": "The Usual Suspects",
+      "description": "Et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum",
+      "image": "../assets/images/TheUsualSuspects.PNG",
+      "price": 18,
+      "stock": 29,
+      "featured": false,
+      "active": true
     },
     {
       "id": 27,
